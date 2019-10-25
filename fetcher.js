@@ -11,8 +11,8 @@ const stats = fs.statSync("index.html");
 // Convert size into bytes
 const sizeBytes = stats.size;
 // Test to confirm variables are correct
-console.log(url);
-console.log(file);
+// console.log(url);
+// console.log(file);
 request(url, (error, response, body) => {
   console.log("error:", error); // Print the error if one occurred
   console.log("statusCode:", response && response.statusCode); // Print the response status code if a response was received
@@ -24,5 +24,3 @@ request(url, (error, response, body) => {
     console.log(`Downloaded and saved ${sizeBytes} bytes to ${file}`);
   });
 });
-
-// find the size of the response (property)
